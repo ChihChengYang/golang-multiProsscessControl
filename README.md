@@ -36,7 +36,7 @@ Usage
     port , _ := cp.childProcessStart()
 
 4.  Commutation with the child Process ( unfinished implement...)   
-    cp.childxProcessCommutation(port)
+    cp.childProcessCommutation(port)
 
 5.  Stop the child Process 
     cp.childProcessStop(port)    

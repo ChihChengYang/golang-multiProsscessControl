@@ -23,7 +23,7 @@ func main() {
     cp.childProcessStop(port)
 
     fmt.Scanln(&num)
-    cp.childxProcessCommutation(port)
+    cp.childProcessCommutation(port)
  
 
     http.ListenAndServe(":11002", nil)

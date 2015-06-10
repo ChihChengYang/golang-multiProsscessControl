@@ -165,10 +165,10 @@ func (cp *childProcess) childProcessStop(port int){
     delete(gxProcessMap, port)
 }
 
-func (cp *childProcess) childxProcessCommutation(port int) {
+func (cp *childProcess) childProcessCommutation(port int) {
     
     if port <= 0 {
-        fmt.Println("childxProcessCommutation Port ERROR!!.....")
+        fmt.Println("childProcessCommutation Port ERROR!!.....")
         return
     }
 
