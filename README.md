@@ -8,10 +8,10 @@ A golang program for multi-prosscess control
 
 parent process port 11002 haNVR.go 
 
-    childProcessesHandle.go <interface> <---port 11003--> xProcess.go arouse Child Process 1  
-                                        <---port 11004--> xProcess.go arouse Child Process 2   
-                                        <---port 11005--> xProcess.go arouse Child Process 3  
-                                        ......
+    childProcessesHandle.go <os.StartProcess> <---port 11003--> arouse xProcess.go <interface> Child Process 1 (nvr.go) 
+                                              <---port 11004--> arouse xProcess.go <interface> Child Process 2 (nvr.go)   
+                                              <---port 11005--> arouse xProcess.go <interface> Child Process 3 (nvr.go)  
+                                              ......
 Usage
 ================
 

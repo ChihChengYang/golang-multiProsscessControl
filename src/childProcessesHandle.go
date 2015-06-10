@@ -38,10 +38,7 @@ var gxProcessMap map[int]childxProcess
 type childProcess struct {
     params []string
 } 
-
-
-//-----------------------------------
-
+ 
 func (xprocess *childxProcess) xProcessHandle(){
     
     exitflag := false
@@ -53,8 +50,7 @@ func (xprocess *childxProcess) xProcessHandle(){
                 break
             default:
         }
-
-        //
+ 
         if(exitflag){
             break
         }
@@ -169,7 +165,6 @@ func (cp *childProcess) childProcessStop(port int){
     delete(gxProcessMap, port)
 }
 
-
 func (cp *childProcess) childxProcessCommutation(port int) {
     
     if port <= 0 {
@@ -183,8 +178,11 @@ func (cp *childProcess) childxProcessCommutation(port int) {
     client := http.Client{
         Timeout: timeout,
     }
-
+   
+ 
     req, err := http.NewRequest("POST", url, strings.NewReader("id="+strconv.Itoa(os.Getpid())+"&close=no"))
+    //req.Header.Set("X-Custom-Header", "myvalue")
+    //req.Header.Set("Content-Type", "text/plain")
     req.Header.Set("Content-Type", "application/x-www-form-urlencoded; param=value")
     response, err := client.Do(req)
  
